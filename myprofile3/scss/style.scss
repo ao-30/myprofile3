@@ -1,0 +1,155 @@
+// 必ずいれること
+@charset "utf-8";
+
+@use "normalize";
+
+body {
+  font-family: "Noto Sans JP" sans-serif;
+  color: #333;
+}
+// 必ずいれること
+
+// ヘッダー
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  // パソコン用
+  @media (min-width: 768px) {
+    margin: 0 auto;
+    max-width: 1000px;
+    padding: 20px;
+  }
+
+  // サイトタイトル
+  h1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 0;
+    padding: 15px;
+    border: solid 2px #333;
+  }
+
+  // メニューのところ
+  .nav-menu {
+    display: flex;
+    font-size: 32px;
+    font-weight: bold;
+    margin: 0;
+    padding: 15px;
+
+
+    li {
+      list-style: none;
+    }
+  
+    a {
+      padding: 15px;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+// メイン画像
+.main-visual {
+  img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 400px;
+  }
+}
+
+//AboutとWorksの箱 
+.about-container, .works-container {
+  padding: 50px 4% 0;
+  @media (min-width: 768px) {
+      margin: 0 auto;
+      max-width: 1000px;
+      padding: 60px 20px 0;
+  }
+  
+  // サブタイトル
+  h2 {
+    font-size: 32px;
+    text-align: center;
+  }
+}
+
+// 写真とテキストが入っている
+.about-box {
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+
+  // 写真の箱
+  .about-img {
+    width: 300px;
+    margin: 0;
+
+    // 写真
+    img {
+      width: 100%;
+      border-radius: 50%;
+      margin: 0;
+      padding: 3px;
+      border: solid 3px #333;
+    }
+  }
+
+  // テキストの箱
+  .about-text {
+    
+    // 名前
+    h3 {
+      font-size: 24px;
+    }
+
+    // 文章
+    ul {
+      margin: 0;
+      padding: 0;
+      li {
+        list-style: none;
+        font-size: 18px;
+        text-indent: -1rem;
+        line-height: 32px; 
+      }
+    }
+  }
+}
+
+// 写真とコメントが入っている
+.works-box {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  // imgとpの箱
+  .works-item {
+    margin: 0;
+    padding: 10px;
+    width: 300px;
+
+    // imgのこと
+    img {
+      width: 100%;
+    }
+
+    // pのこと
+    p {
+      font-size: 14px;
+    }
+  }
+}
+
+// フッター
+.footer-text {
+  font-size: 16px;
+  text-align: center;
+}
